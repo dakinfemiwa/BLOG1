@@ -1,0 +1,28 @@
+{%extends "layout.html"%}
+{% block content %}
+    <form method="POST", action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+
+            <div class="formsec">
+                {{ form.username.label(class="formlbl") }}
+                {{ form.username(class="formentry") }}
+            </div>
+            <div class="formsec">
+                {{ form.email.label(class="formlbl") }}
+                {{ form.email(class="formentry") }}
+            </div>
+            <div class="formsec">
+                {{ form.password.label(class="formlbl") }}
+                {{ form.password(class="formentry") }}
+            </div>
+            <div class="formsec">
+                {{ form.confirmPassword.label(class="formlbl") }}
+                {{ form.confirmPassword(class="formentry") }}
+            </div>
+        </fieldset>
+        <div>
+            {{form.submit() }}
+        </div>
+    </form>
+{% endblock content%}

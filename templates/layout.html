@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+</head>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{category}}">
+                {{message}}
+            </div>
+        {%endfor %}
+    {% endif %}
+{% endwith %}
+
+<header>
+    <h1>Blog</h1>
+</header>
+
+
+<p></p>
+<p></p>
+<style>
+    html {
+        height: 100%;
+        width: 100%;
+        font-family: sans-serif;
+        background-image: url("https://cdn.pixabay.com/photo/2018/08/06/19/07/architecture-3588171_960_720.jpg");
+        background-size: 100% 100%;
+        background-attatchment: fixed;
+        background-repeat:no-repeat;
+     }
+     header {
+        background-color: rgba(5, 5, 5, 0.8);
+        padding: 5px;
+        border-radius: 4px;
+        color: white;
+     }
+     section {
+        padding: 2%;
+        background-color: white;
+        border-radius: 10px;
+     }
+     .posted {
+        font-style: italic;
+     }
+     body {
+        padding: 0% 10%;
+        display: fixed;
+     }
+    .formlbl {
+        width: 30%;
+        display: block;
+        padding: 5px;
+    }
+    .form-group {
+        background-color: white;
+    }
+    .formentry {
+        border-radius: 2px;
+        border: 0.5px solid black;
+        font-size: 16px;
+    }
+    .formsec {
+        padding: 5px;
+    }
+</style>
+<body>
+{% block content %}{%endblock content %}
+</body>
+</html>
