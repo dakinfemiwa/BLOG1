@@ -8,9 +8,8 @@
     {% endif %}
 </head>
 
-<p></p>
-<p></p>
 <body>
+<div class="blogsec">
     {% for post in posts %}
         <section>
         <h1>{{post.title}}</h1>
@@ -18,8 +17,9 @@
         <p>By {{post.author}}</p>
         <p>{{post.content}}</p>
         </section>
-        <p></p>
     {% endfor%}
+</div>
+
 </body>
 
 {% endblock content%}

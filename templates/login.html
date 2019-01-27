@@ -11,25 +11,25 @@
 
             </div>
             <div class="formsec">
-                {{ form.email.label(class="formlbl") }}
-                {{ form.email(class="formentry") }}
-            </div>
-            <div class="formsec">
                 {{ form.password.label(class="formlbl") }}
                 {{ form.password(class="formentry") }}
             </div>
-            <div class="formsec">
-                {{ form.confirmPassword.label(class="formlbl") }}
-                {{ form.confirmPassword(class="formentry") }}
+            <div>
+                {{ form.remember() }}
+                {{ form.remember.label() }}
             </div>
+
         </fieldset>
         <div class="buttonWindow">
             {{form.submit(class="btn") }}
         </div>
+        <small>
+            <a href="#">Forgot Password?</a>
+        </small>
     </form>
     <div class="extras"
         <small>
-            Already have an account? Click <a href="{{ url_for('login') }}" class="underline"> here </a> to sign in.
+            Need an account? Click <a href="{{ url_for('register') }}" class="underline"> here </a> to sign up now.
         </small>
     </div>
 </div>
